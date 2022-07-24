@@ -30,3 +30,9 @@ div.card-container > div > p {
 div.card-container > div > p > span {
   font-weight: normal;
 }
+
+/*Exercise 2 Styles:*/
+
+div.card-container > p {
+  padding: 0;
+}
