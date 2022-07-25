@@ -36,3 +36,20 @@ div.card-container > div > p > span {
 div.card-container > p {
   padding: 0;
 }
+
+/*Exercise 4 Styles:*/
+
+.rgbCenter {
+  flex-direction: column;
+  align-items: center;
+}
+
+.rgb > div:first-child {
+  color: white;
+  padding: 20px;
+}
+
+.rgb > div:last-child {
+  color: black;
+  padding: 20px;
+}
