@@ -82,6 +82,32 @@ div.card-container > p {
   margin-left: 20px;
 }
 
+/*Exercise 6 Styles:*/
+
 #rating {
   font-size: 2em;
+}
+
+/*Exercise 7 Styles:*/
+
+.DriverCard {
+  background-color: #425cbb;
+  border-radius: 10px;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.DriverCard img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 120px;
+}
+
+.DriverCard > div > p:nth-child(2) {
+  font-size: 1.8em;
 }
