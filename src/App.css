@@ -81,3 +81,7 @@ div.card-container > p {
 .bank {
   margin-left: 20px;
 }
+
+#rating {
+  font-size: 2em;
+}
