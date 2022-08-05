@@ -111,3 +111,11 @@ div.card-container > p {
 .DriverCard > div > p:nth-child(2) {
   font-size: 1.8em;
 }
+
+button.like-btn {
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
+  border: 1px solid rgb(0, 0, 0);
+  color: white;
+  font-size: 1.5em;
+}
