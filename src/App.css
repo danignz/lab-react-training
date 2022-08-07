@@ -119,3 +119,26 @@ button.like-btn {
   color: white;
   font-size: 1.5em;
 }
+
+ul.NumbersTable {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.NumbersTable > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+ul.NumbersTable > li.red {
+  background-color: red;
+}
+
+ul.NumbersTable > li.white {
+  background-color: white;
+}
