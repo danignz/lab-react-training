@@ -37,6 +37,20 @@ export default function FaceBook() {
     setProfiles(profilesSelected);
   };
 
+  const handleVisibility = (user) => {
+    const visibleProfileList = profilesData.map((profile) => {
+      if (profile === user) {
+        return {
+          ...profile,
+          isDataVisible: true,
+        };
+      }
+      return profile;
+    });
+
+    setProfiles(visibleProfileList);
+  };
+
   return (
     <div>
       <div id="countryBtn">
@@ -55,11 +69,15 @@ export default function FaceBook() {
             key={index}
           >
             <img
+              onClick={() => handleVisibility(user)}
               width="150px"
               src={user.img}
               alt={`${user.firstName} ${user.lastName} photography`}
             />
-            <div>
+            <div
+              id="profile"
+              className={`${user.isDataVisible ? null : 'hidden'}`}
+            >
               <p>
                 <strong>First name:</strong>
                 <span>{user.firstName}</span>

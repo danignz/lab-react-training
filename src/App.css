@@ -162,3 +162,7 @@ div.card-container.white {
 div.card-container.blue {
   background-color: #a3d2e2;
 }
+
+div#profile.hidden {
+  display: none;
+}
