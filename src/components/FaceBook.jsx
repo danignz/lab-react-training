@@ -39,7 +39,7 @@ export default function FaceBook() {
 
   const handleVisibility = (user) => {
     const visibleProfileList = profilesData.map((profile) => {
-      if (profile === user) {
+      if (JSON.stringify(profile) === JSON.stringify(user)) {
         return {
           ...profile,
           isDataVisible: true,
