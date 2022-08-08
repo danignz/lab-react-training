@@ -65,6 +65,17 @@ export default function FaceBook() {
     setProfiles(falseFirst);
   };
 
+  const handleSearch = (e) => {
+    if (e.target.value === '') {
+      setProfiles(profiles);
+    } else {
+      const filtered = profiles.filter((elem) =>
+        elem.firstName.toLowerCase().startsWith(e.target.value.toLowerCase())
+      );
+      setProfiles(filtered);
+    }
+  };
+
   return (
     <div>
       <div id="countryBtn">
@@ -80,6 +91,12 @@ export default function FaceBook() {
         <button onClick={sortByCountry}>Sort by country</button>
         <button onClick={sortByRol}>Sort by rol</button>
       </div>
+
+      <input
+        type="text"
+        placeholder="🔎 by first name"
+        onChange={(e) => handleSearch(e)}
+      />
 
       {profilesData.map((user, index) => {
         return (
