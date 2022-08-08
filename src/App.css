@@ -143,7 +143,8 @@ ul.NumbersTable > li.white {
   background-color: white;
 }
 
-div#countryBtn button {
+div#countryBtn button,
+div#orderBtn button {
   background-color: white;
   padding: 5px;
   margin: 5px;
@@ -151,7 +152,8 @@ div#countryBtn button {
   border: 2px solid grey;
 }
 
-div#countryBtn button:hover {
+div#countryBtn button:hover,
+div#orderBtn button:hover {
   background-color: #a3d2e2;
 }
 

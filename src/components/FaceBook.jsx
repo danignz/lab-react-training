@@ -51,6 +51,20 @@ export default function FaceBook() {
     setProfiles(visibleProfileList);
   };
 
+  const sortByCountry = () => {
+    const ordered = [...profilesData].sort((a, b) =>
+      a.country.localeCompare(b.country)
+    );
+    setProfiles(ordered);
+  };
+
+  const sortByRol = () => {
+    const falseFirst = [...profilesData].sort(
+      (a, b) => Number(a.isStudent) - Number(b.isStudent)
+    );
+    setProfiles(falseFirst);
+  };
+
   return (
     <div>
       <div id="countryBtn">
@@ -60,6 +74,11 @@ export default function FaceBook() {
             {country}
           </button>
         ))}
+      </div>
+
+      <div id="orderBtn">
+        <button onClick={sortByCountry}>Sort by country</button>
+        <button onClick={sortByRol}>Sort by rol</button>
       </div>
 
       {profilesData.map((user, index) => {
