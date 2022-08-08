@@ -142,3 +142,23 @@ ul.NumbersTable > li.red {
 ul.NumbersTable > li.white {
   background-color: white;
 }
+
+div#countryBtn button {
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+  font-size: 1.1em;
+  border: 2px solid grey;
+}
+
+div#countryBtn button:hover {
+  background-color: #a3d2e2;
+}
+
+div.card-container.white {
+  background-color: white;
+}
+
+div.card-container.blue {
+  background-color: #a3d2e2;
+}
