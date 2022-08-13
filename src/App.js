@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import IdCard from './components/IdCard';
 import Greetings from './components/Greetings';
@@ -14,8 +15,43 @@ import Dice from './components/Dice';
 import Carousel from './components/Carousel';
 import NumbersTable from './components/NumbersTable';
 import FaceBook from './components/FaceBook';
+import SignupPage from './components/SignupPage';
 
 function App() {
+
+  /* Exercice 15 additional code to manage message afer submit*/
+  // By default message is hidden if not login by form
+  const [showMessage, setShowMessage] = useState(false);
+  const [userApp, setUserApp] = useState({
+    email: '',
+    password: '',
+    nationality: '',
+  });
+
+  const handleSignUp = (user, message) => {
+    setShowMessage(message);
+    setUserApp(user);
+  };
+
+  // function to manage multilanguage greeting
+  const greeting = (nationality) => {
+    let text;
+    switch (nationality) {
+      case 'de':
+        text = 'Hallo';
+        break;
+      case 'en':
+        text = 'Hello';
+        break;
+      case 'fr':
+        text = 'Bonjour';
+        break;
+      default:
+        text = 'Hello';
+    }
+    return text;
+  };
+
   return (
     <>
       <h1>IdCard</h1>
@@ -138,6 +174,20 @@ function App() {
 
       <h1>FaceBook</h1>
       <FaceBook />
+
+      <div>
+        <h1>SignupPage</h1>
+        <SignupPage newSignUp={handleSignUp} />
+
+        {showMessage && (
+          <section>
+            <hr />
+            <p>{greeting(userApp.nationality)}</p>
+            <p>Your email address is: {userApp.email}</p>
+            <p>Your email address is correct</p>
+          </section>
+        )}
+      </div>
     </>
   );
 }
