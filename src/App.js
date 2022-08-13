@@ -16,9 +16,9 @@ import Carousel from './components/Carousel';
 import NumbersTable from './components/NumbersTable';
 import FaceBook from './components/FaceBook';
 import SignupPage from './components/SignupPage';
+import RGBColorPicker from './components/RGBColorPicker';
 
 function App() {
-
   /* Exercice 15 additional code to manage message afer submit*/
   // By default message is hidden if not login by form
   const [showMessage, setShowMessage] = useState(false);
@@ -188,6 +188,9 @@ function App() {
           </section>
         )}
       </div>
+
+      <h1>RGBColorPicker</h1>
+      <RGBColorPicker />
     </>
   );
 }

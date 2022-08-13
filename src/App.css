@@ -206,3 +206,48 @@ div form button {
   border: none;
   padding: 10px 10px;
 }
+
+.containerPicker {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.pickBox {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+.containerPicker input[type='number'] {
+  margin-left: 10px;
+  padding: 0px;
+  width: 60px;
+  height: 40px;
+}
+
+.containerPicker p {
+  margin: 10px 0 10px 5px;
+  font-weight: bold;
+}
+
+.containerRGB {
+  display: inline-block;
+  height: 100px;
+  display: flex;
+  margin-top: 10px;
+}
+
+.containerRGB p {
+  display: inline-block;
+  font-weight: bold;
+  margin: 10px 20px 50px 5px;
+}
+
+#resultRGB {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  display: inline-block;
+}
